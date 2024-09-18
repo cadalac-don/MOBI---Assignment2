@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Simple User Interface</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="edit_message">Enter Peter V\'s number</string>
+    <string name="button_send">Peter\'s colour</string>
+    <string name="title_activity_display_message">Peter\'s Message</string>
+
+    <string name="hello_world">Hello world!</string>
+
+</resources>
