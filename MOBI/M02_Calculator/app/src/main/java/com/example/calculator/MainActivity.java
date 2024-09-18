@@ -45,14 +45,14 @@ public class MainActivity extends AppCompatActivity {
                 textANS.setText(output_answer.toString());
 
                 // log what we are doing
-                Log.w("M01_Calculator ADD BUTTON", "Add Selected with => " + input1 + " + " + input2 + "=" + output_answer);
+                Log.w("M01_Calculator ADD BUTTON", "Add Selected with => " + input1 + " + " + input2 + " = " + output_answer);
             }
         });
 
         Button subtractButton = (Button) findViewById(R.id.b_Subtract);
         subtractButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Log.d("M01_Calculator SUBTRACT BUTTON", "User tapped the Add button");
+                Log.d("M01_Calculator SUBTRACT BUTTON", "User tapped the Subtract button");
 
                 Double input1 = 0.0;
                 Double input2 = 0.0;
@@ -64,21 +64,21 @@ public class MainActivity extends AppCompatActivity {
                     output_answer = input1 - input2;
                 }
                 catch (Exception e) {
-                    Log.w("M01_Calculator SUBTRACT BUTTON", "Add Selected with no inputs ... " + output_answer);
+                    Log.w("M01_Calculator SUBTRACT BUTTON", "Subtract Selected with no inputs ... " + output_answer);
                 }
 
                 // Set the Answer into the the answer field
                 textANS.setText(output_answer.toString());
 
                 // log what we are doing
-                Log.w("M01_Calculator SUBTRACT BUTTON", "Add Selected with => " + input1 + " - " + input2 + "=" + output_answer);
+                Log.w("M01_Calculator SUBTRACT BUTTON", "Subtract Selected with => " + input1 + " - " + input2 + " = " + output_answer);
             }
         });
 
         Button divideButton = (Button) findViewById(R.id.b_Divide);
         divideButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Log.d("M01_Calculator SUBTRACT BUTTON", "User tapped the Add button");
+                Log.d("M01_Calculator DIVIDE BUTTON", "User tapped the Divide button");
 
                 Double input1 = 0.0;
                 Double input2 = 0.0;
@@ -87,20 +87,44 @@ public class MainActivity extends AppCompatActivity {
                 try {
                     input1 = Double.parseDouble(NumberBoxN1.getText().toString());
                     input2 = Double.parseDouble(NumberBoxN2.getText().toString());
-                    output_answer = input1 - input2;
+                    output_answer = input1 / input2;
                 }
                 catch (Exception e) {
-                    Log.w("M01_Calculator SUBTRACT BUTTON", "Add Selected with no inputs ... " + output_answer);
+                    Log.w("M01_Calculator DIVIDE BUTTON", "Divide Selected with no inputs ... " + output_answer);
                 }
 
                 // Set the Answer into the the answer field
                 textANS.setText(output_answer.toString());
 
                 // log what we are doing
-                Log.w("M01_Calculator SUBTRACT BUTTON", "Add Selected with => " + input1 + " - " + input2 + "=" + output_answer);
+                Log.w("M01_Calculator DIVIDE BUTTON", "Divide Selected with => " + input1 + " / " + input2 + " = " + output_answer);
             }
         });
 
-    }
+        Button multiplyButton = (Button) findViewById(R.id.b_Multiply);
+        multiplyButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Log.d("M01_Calculator MULTIPLY BUTTON", "User tapped the multiply button");
 
+                Double input1 = 0.0;
+                Double input2 = 0.0;
+                Double output_answer = 0.0;
+
+                try {
+                    input1 = Double.parseDouble(NumberBoxN1.getText().toString());
+                    input2 = Double.parseDouble(NumberBoxN2.getText().toString());
+                    output_answer = input1 * input2;
+                }
+                catch (Exception e) {
+                    Log.w("M01_Calculator MULTIPLY BUTTON", "Multiply Selected with no inputs ... " + output_answer);
+                }
+
+                // Set the Answer into the the answer field
+                textANS.setText(output_answer.toString());
+
+                // log what we are doing
+                Log.w("M01_Calculator MULTIPLY BUTTON", "Multiply Selected with => " + input1 + " * " + input2 + " = " + output_answer);
+            }
+        });
+    }
 }
